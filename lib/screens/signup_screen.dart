@@ -20,7 +20,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/zikflow-logo.png', width: 100, height: 100),
+            Image.asset('assets/images/zikflow-logo.png', width: 100, height: 100),
             const SizedBox(height: 20),
             TextField(
               controller: _emailController,
