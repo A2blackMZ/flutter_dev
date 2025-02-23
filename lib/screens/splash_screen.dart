@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: AnimatedOpacity(
           duration: const Duration(seconds: 2),
           opacity: 1.0,
-          child: Image.asset('assets/image.png', width: 150, height: 150),
+          child: Image.asset('assets/zikflow-logo.png', width: 150, height: 150),
         ),
       ),
     );
