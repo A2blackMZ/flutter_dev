@@ -31,7 +31,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                Image.asset('assets/images/zikflow-logo.png', width: 100, height: 100),
+                Image.asset('assets/images/remove-bg.jpg', width: 100, height: 100),
             const SizedBox(height: 20),
             _buildTextField(_usernameController, "Nom d'utilisateur", Icons.person),
                 const SizedBox(height: 15),
