@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  _SignUpScreenState createState() => _SignUpScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
-  final TextEditingController _usernameController = TextEditingController();
+class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController = TextEditingController();
   bool _isChecked = false;
 
   @override
@@ -28,22 +26,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Image.asset('assets/images/zikflow-logo.png', width: 200, height: 200),
                 const SizedBox(height: 20),
                 const Text(
-                  "Création de compte",
-                  style: TextStyle(
-                    fontSize: 24, // Taille de la police
-                    fontWeight: FontWeight.bold, // Gras
-                    color: Colors.black, // Couleur du texte
+                  "Connexion",
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
                   ),
                 ),
-                const SizedBox(height: 10), // Espacement entre le titre et le champ de texte
-
-                _buildTextField(_usernameController, "Nom d'utilisateur", Icons.person),
-                const SizedBox(height: 15),
+                const SizedBox(height: 10),
                 _buildTextField(_emailController, 'Email', Icons.email),
                 const SizedBox(height: 15),
                 _buildTextField(_passwordController, 'Mot de passe', Icons.lock, obscureText: true),
-                const SizedBox(height: 15),
-                _buildTextField(_confirmPasswordController, 'Confirmer le mot de passe', Icons.lock, obscureText: true),
                 const SizedBox(height: 10),
                 Row(
                   children: [
@@ -57,7 +50,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     const Expanded(
                       child: Text(
-                        "J'accepte les termes et conditions",
+                        "Se souvenir de moi",
                         style: TextStyle(color: Colors.black),
                       ),
                     )
@@ -72,10 +65,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       borderRadius: BorderRadius.circular(30),
                     ),
                   ),
-                  onPressed: _isChecked ? () {} : null,
+                  onPressed: () {
+                    // Logique de connexion ici
+                  },
                   child: const Text(
-                    "S'inscrire",
+                    "Se connecter",
                     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                TextButton(
+                  onPressed: () {
+                    // Navigation vers la page de création de compte
+                  },
+                  child: const Text(
+                    "Pas encore de compte ? Créer un compte",
+                    style: TextStyle(color: Color(0xFF104590)),
                   ),
                 ),
               ],
